@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
+// Component is still in progress - some parts may need further improvements or updates.
 
+//here replace the links to actual links
 const universities = [
   { name: "MDCAT", logo: "mdcat-logo-url", link: "/mdcat" },
   { name: "NUST", logo: "nust-logo-url", link: "/nust" },

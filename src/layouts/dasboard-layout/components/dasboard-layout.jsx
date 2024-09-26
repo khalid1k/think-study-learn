@@ -11,7 +11,7 @@ import { Settings } from "./settings";
 export const DashboardLayout = () => {
   const [isLeftSidebarOpen, setIsLeftSidebarOpen] = useState(false);
   const [isRightSidebarOpen, setIsRightSidebarOpen] = useState(false);
-
+  //it is toggle to open the left side bar
   const toggleLeftSidebar = () => {
     setIsLeftSidebarOpen(!isLeftSidebarOpen);
   };
@@ -32,7 +32,7 @@ export const DashboardLayout = () => {
           toggleLeftSidebar={toggleLeftSidebar}
           toggleRightSidebar={toggleRightSidebar}
         />
-        {/* <MainContent /> */}
+        {/* main container to show the pages in the dashborad */}
         <div className="flex-1 p-6 bg-gray-100">
           <Routes>
             <Route path="/universites" element={<UniversityGrid />} />

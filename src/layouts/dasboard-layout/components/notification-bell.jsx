@@ -1,5 +1,5 @@
 import React from "react";
-
+// component to show the notifications
 export const NotificationBell = ({ notificationCount }) => {
   return (
     <div className="relative">

@@ -19,7 +19,6 @@ export function SignUp() {
   };
   const handleClickShowPassword = () =>
     setPassValue({ ...passValue, showPassword: !passValue.showPassword });
-  const [rememberME, setRememberME] = useState(false);
   return (
     <div className="flex flex-col md:flex-row sm:pt-3">
       <figure className="w-full md:w-1/2 lg:w-full">
@@ -110,6 +109,7 @@ export function SignUp() {
               id="college"
               type="text"
               placeholder="Enter College Name"
+              value={collegeName}
               onChange={(e) => setCollegeName(e.target.value)}
             />
           </div>
@@ -125,6 +125,7 @@ export function SignUp() {
               id="city"
               type="text"
               placeholder="Enter City"
+              value={city}
               onChange={(e) => setCity(e.target.value)}
             />
           </div>
@@ -140,6 +141,7 @@ export function SignUp() {
               id="course"
               type="text"
               placeholder="Enter course eg. (Pre-Eng)"
+              value={course}
               onChange={(e) => setCourse(e.target.value)}
             />
           </div>

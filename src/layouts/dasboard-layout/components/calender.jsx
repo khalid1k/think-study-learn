@@ -16,6 +16,7 @@ export default function DateCalendarValue() {
 
   return (
     <div className="pt-8">
+      {/* it is MUI component */}
       <LocalizationProvider dateAdapter={AdapterDayjs}>
         <StyledDateCalendar />
       </LocalizationProvider>

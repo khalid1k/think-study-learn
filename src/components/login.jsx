@@ -5,21 +5,24 @@ import Switch from "@mui/material/Switch";
 import { Link } from "react-router-dom";
 import { FiEye } from "react-icons/fi";
 import { FiEyeOff } from "react-icons/fi";
-import { Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 export function Login() {
   const [passValue, setPassValue] = useState({
     password: "",
     showPassword: false,
   });
-  const [phoneNumber, setPhoneNumer] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
   const handlePasswordChange = (prop) => (event) => {
     setPassValue({ ...passValue, [prop]: event.target.value });
   };
+  //show or hide password logic
   const handleClickShowPassword = () =>
     setPassValue({ ...passValue, showPassword: !passValue.showPassword });
   const [rememberME, setRememberME] = useState(false);
-  const handlLogin = () => {
-    <Navigate to="/dashboard" />;
+  const navigate = useNavigate();
+  //function to handle the login logic
+  const handleLogin = () => {
+    navigate("/dashboard");
   };
   return (
     <div className="flex flex-col md:flex-row ">
@@ -42,16 +45,16 @@ export function Login() {
           <div className="mb-4">
             <label
               className="block text-gray-700 text-sm font-bold mb-2 ml-4"
-              htmlFor="phonenumber"
+              htmlFor="phoneNumber"
             >
               Login
             </label>
             <input
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              id="phonenumber"
+              id="phoneNumber"
               type="number"
               placeholder="Phone number"
-              onChange={(e) => setPhoneNumer(e.target.value)}
+              onChange={(e) => setPhoneNumber(e.target.value)}
               value={phoneNumber}
             />
           </div>
@@ -69,7 +72,7 @@ export function Login() {
                 onChange={handlePasswordChange("password")}
                 value={passValue.password}
                 id="password"
-                placeholder="Eneter password"
+                placeholder="Enter password"
               />
               <div
                 className="icon_button absolute right-4 top-9"
@@ -85,7 +88,7 @@ export function Login() {
           </div>
 
           <div className="flex items-center justify-between ">
-            <div className="flex  items-center ">
+            <div className="flex  items-center -z-10">
               <Switch
                 checked={rememberME}
                 label="Remember me"
@@ -103,16 +106,17 @@ export function Login() {
           </div>
         </div>
         <button
-          onClick={handlLogin}
+          onClick={handleLogin}
           className="pt-[10px] pb-[10px] pl-6 pr-6 bg-gradient-to-r from-[#3A3AED] to-[#1616D1] text-[#FFFFFF] mt-8 w-full rounded-md"
         >
           Login
         </button>
         <p className="text-center mt-7 justify-center md:mt-[50px] ">
           <span className="text-[12px] ">
-            Dont have an account? &nbsp; &nbsp;
+            Don't have an account? &nbsp; &nbsp;
           </span>{" "}
           <span className="text-[12px] text-[#007AFF] hover:text-blue-800">
+            {/* change the actual signUp link */}
             <Link to="/">Sign up now</Link>
           </span>
         </p>
