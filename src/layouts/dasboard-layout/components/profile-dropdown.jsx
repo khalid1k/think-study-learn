@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import profilePic from "../../../assets/profile-pic.png";
 export const ProfileDropdown = () => {
   const [isOpen, setIsOpen] = useState(false);
-
+  //function to open the profile dropdown
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
   };
@@ -34,6 +34,7 @@ export const ProfileDropdown = () => {
           />
         </svg>
       </button>
+      {/* toggle to open the profile dropdown */}
 
       {isOpen && (
         <div className="absolute z-10 right-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">

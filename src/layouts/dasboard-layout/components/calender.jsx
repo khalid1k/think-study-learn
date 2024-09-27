@@ -5,6 +5,7 @@ import { DateCalendar } from "@mui/x-date-pickers/DateCalendar";
 import { LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { styled } from "@mui/system";
+//giving style to the calendar to set the required width and height
 const StyledDateCalendar = styled(DateCalendar)({
   "&.MuiDateCalendar-root": {
     height: "400px",

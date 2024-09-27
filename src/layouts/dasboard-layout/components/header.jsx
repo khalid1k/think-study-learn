@@ -1,5 +1,6 @@
 import React from "react";
 import { CiCircleMore } from "react-icons/ci";
+// This component is used on mobile screens to show the left and right sides.
 export const Header = ({ toggleLeftSidebar, toggleRightSidebar }) => {
   return (
     <header className="flex justify-between items-center p-4 bg-white shadow-md sm:hidden">

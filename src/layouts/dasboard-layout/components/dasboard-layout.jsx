@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { Route, Routes, Navigate } from "react-router-dom";
-import { MainContent } from "./main-content";
+import { Route, Routes } from "react-router-dom";
 import { RightSidebar } from "./right-side-bar";
 import { LeftSidebar } from "./sidebar";
 import { Header } from "./header";
@@ -28,6 +27,7 @@ export const DashboardLayout = () => {
       />
 
       <div className="flex-1 flex flex-col">
+        {/* this component used in the mobile screen */}
         <Header
           toggleLeftSidebar={toggleLeftSidebar}
           toggleRightSidebar={toggleRightSidebar}
